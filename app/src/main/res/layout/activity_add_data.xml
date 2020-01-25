@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:id="@+id/dialogId">
+
+    <!-- This dialog activity for adding information -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/shareButtonId"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:background="#00000000"
+            android:drawableLeft="@drawable/share"
+            android:drawableStart="@drawable/share" />
+        <Button
+            android:id="@+id/cacelButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_marginRight="2dp"
+            android:background="#00000000"
+            />
+        <Button
+            android:id="@+id/saveButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:layout_marginRight="2dp"
+            android:background="#00000000"
+            />
+    </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+
+         <EditText
+             android:id="@+id/subjectEditTextId"
+             android:layout_width="match_parent"
+             android:layout_height="60dp"
+             android:backgroundTint="#00ffffff"
+             android:ems="10"
+             android:hint="@string/subject"
+             android:inputType="textPersonName"
+             tools:ignore="MissingConstraints"
+             tools:layout_editor_absoluteX="0dp"
+             tools:layout_editor_absoluteY="2dp"
+             android:maxLength="35"/>
+
+     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/descriptionEditTextId"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:backgroundTint="#00ffffff"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="@string/description"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewGPS"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Coordinates" />
+
+            <Button
+                android:id="@+id/buttonGPS"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:onClick="getCoordinates"
+                android:text="@string/get_coordinates" />
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:onClick="captureImage"
+                android:text="@string/capture_image" />
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:onClick="displayImage"
+                android:text="@string/display_image" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
