@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Pamiętnik</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_data_view">DataViewActivity</string>
+    <string name="title_activity_add_data">AddDataActivity</string>
+    <string name="about">
+        \n\n
+        Ta apka pomoże Ci zapisywać i dzielić się\n
+        ✨*:･ﾟ✧ Twoimi wspomnieniami! *:･ﾟ✧✨
+        \n\n
+
+        Jak jej używać?\n\n
+
+        💙 Jeśli chcesz dodać nową notatkę, po prostu kliknij ikonę dodawania w prawym dolnym rogu ekranu głównego.\n\n
+        💙 Możesz sprawdzić swoje współrzędne, zrobić i wyświetlić zdjęcie, klikając odpowiedni przycisk.\n\n
+
+        ✨💙✨\n\n
+        Po wykonaniu notatki, kliknij przycisk Zapisz, aby zapisać.\n
+        Możesz udostępnić swoje wspomnienie - kliknij przycisk udostępniania!\n
+        Możesz udostępnić swoje wspomnienie - kliknij przycisk Edytuj!\n\n
+
+        Jeśli chcesz usunąć niektóre notatki, możesz to zrobić i usunąć wiele elementów jednocześnie.
+        Po prostu przytrzymaj elementy, które chcesz usunąć. Następnie naciśnij przycisk usuwania, aby usunąć.\n\n
+
+        ✨ Miłego dnia… ✨ \n\n
+        …i nie zapomnij zostawić nowej notatki!\n\n
+        *:･ﾟ✧(=✪ ᆺ ✪=)*:･ﾟ✧
+    </string>
+    <string name="capture_image">Zrób zdjęcie</string>
+    <string name="display_image">Pokaż zdjęcie</string>
+    <string name="subject">Temat</string>
+    <string name="save">Zapisz</string>
+    <string name="cancel">Anuluj</string>
+    <string name="get_coordinates">Gdzie jesteś?</string>
+    <string name="coordinates">Współrzędne</string>
+    <string name="date">Data</string>
+    <string name="description">Treść</string>
+    <string name="add_sth">Coś Ci się przypomniało? Edytuj notatkę!</string>
+    <string name="instructions">Informacje o apce</string>
+    <string name="delete">Usuń</string>
+    <string name="items_selected"> wybrane elementy</string>
+    <string name="items_deleted"> elementów usunięto</string>
+    <string name="lat"> Szerokość geo.: </string>
+    <string name="lon"> Wysokość geo.: </string>
+    <string name="no_subject">Nie dodano tematu notatki</string>
+    <string name="data_added">Dodano notatkę</string>
+    <string name="data_not_added">Nie dodano notatki</string>
+    <string name="data_updated">Edytowano notatkę</string>
+    <string name="update">Edytuj</string>
+</resources>
