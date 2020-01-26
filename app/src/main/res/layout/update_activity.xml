@@ -2,7 +2,8 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/primaryTextColor">
 
 
     <!-- This dialog activity for updating information -->
@@ -10,31 +11,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="right">
+        android:gravity="right"
+        android:background="@color/primaryTextColor">
 
         <Button
+            style="@style/small_button_style"
             android:id="@+id/shareButtonIdUpdate"
-            android:layout_width="42dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:background="#00000000"
             android:drawableLeft="@drawable/share"
-            android:drawableStart="@drawable/share" />
+            android:drawableStart="@drawable/share"/>
         <Button
+            style="@style/small_button_style"
             android:id="@+id/cacelButtonIdUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="cancel"
-            android:layout_marginRight="2dp"
-            android:background="#00000000"
+            android:text="@string/cancel"
             />
         <Button
             android:id="@+id/saveButtonIdUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Update"
-            android:layout_marginRight="2dp"
-            android:background="#00000000"
+            android:text="@string/update"
+            style="@style/small_button_style"
             />
     </LinearLayout>
 
@@ -43,18 +42,31 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_height_sub"
+            android:textAlignment="center"
+            android:padding="@dimen/text_size"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            android:text="@string/add_sth" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <EditText
             android:id="@+id/subjectEditTextIdUpdate"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:backgroundTint="#00ffffff"
             android:ems="10"
             android:hint="Subject"
             android:inputType="textPersonName"
-
-            android:maxLength="35"/>
+            android:maxLength="35"
+            style="@style/edit_text_style"/>
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -64,9 +76,9 @@
 
         <EditText
             android:id="@+id/descriptionEditTextIdUpdate"
+            style="@style/edit_text_style"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:backgroundTint="#00ffffff"
+            android:layout_height="509dp"
             android:ems="10"
             android:gravity="start"
             android:hint="@string/description"
@@ -76,41 +88,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewGPS"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center"
-                android:text="Coordinates" />
-
-            <Button
-                android:id="@+id/buttonGPS"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
-                android:onClick="getCoordinates"
-                android:text="@string/get_coordinates" />
-
-            <Button
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
-                android:onClick="captureImage"
-                android:text="@string/capture_image" />
-
-            <Button
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
-                android:onClick="displayImage"
-                android:text="@string/display_image" />
-
-        </LinearLayout>
+            android:orientation="vertical"/>
 
     </LinearLayout>
 </LinearLayout>

@@ -1,6 +1,7 @@
 package pl.edu.pb.mydiary.Activity;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -48,13 +49,12 @@ public class AddDataActivity extends AppCompatActivity {
 
         textViewGPS = (TextView) findViewById(R.id.textViewGPS);
         buttonGPS = (Button) findViewById(R.id.buttonGPS);
-        textViewGPS = (TextView) findViewById(R.id.textViewGPS);
 
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                textViewGPS.setText("Latitude: " + String.format("%.2f", location.getLatitude()) + "  Longitude: " + (String.format("%.2f",location.getLongitude())));
+                textViewGPS.setText(getString(R.string.lat) + String.format("%.2f", location.getLatitude()) + getString(R.string.lon) + (String.format("%.2f",location.getLongitude())));
             }
 
             @Override
@@ -136,12 +136,11 @@ public class AddDataActivity extends AppCompatActivity {
             default:
                 break;
         }
-
     }
-
 
     private void configureButton() {
         buttonGPS.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("MissingPermission")
             @Override
             public void onClick(View view) {
                 locationManager.requestLocationUpdates("gps", 5000, 5, locationListener);
@@ -159,7 +158,7 @@ public class AddDataActivity extends AppCompatActivity {
 
 
         if(subjectEt.getText().length() == 0){
-            Toast.makeText(getApplicationContext(),"You didn't add any subject", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),getString(R.string.no_subject), Toast.LENGTH_SHORT).show();
         }
         else{
             l = mydb.insertData(subjectEt.getText().toString(),
@@ -168,10 +167,10 @@ public class AddDataActivity extends AppCompatActivity {
         }
 
         if(l>=0){
-            Toast.makeText(getApplicationContext(),"Data added", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),getString(R.string.data_added), Toast.LENGTH_SHORT).show();
         }
         else {
-            Toast.makeText(getApplicationContext(), "Data not added", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getString(R.string.data_not_added), Toast.LENGTH_SHORT).show();
         }
     }
     public void backToMain()

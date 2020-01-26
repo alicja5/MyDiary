@@ -5,40 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ffffff"
-    android:id="@+id/dialogId">
+    android:background="@color/primaryTextColor"
+    android:id="@+id/dialogId"
+    >
 
     <!-- This dialog activity for adding information -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="right">
+        android:gravity="right"
+        android:background="@color/primaryTextColor">
 
         <Button
             android:id="@+id/shareButtonId"
-            android:layout_width="42dp"
+            android:layout_width="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/small_padding"
             android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:background="#00000000"
             android:drawableLeft="@drawable/share"
-            android:drawableStart="@drawable/share" />
+            android:drawableStart="@drawable/share"
+            style="@style/small_button_style"
+            />
         <Button
             android:id="@+id/cacelButtonId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cancel"
-            android:layout_marginRight="2dp"
-            android:background="#00000000"
+            style="@style/small_button_style"
             />
         <Button
             android:id="@+id/saveButtonId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/save"
-            android:layout_marginRight="2dp"
-            android:background="#00000000"
+            style="@style/small_button_style"
             />
+
     </LinearLayout>
 
      <LinearLayout
@@ -49,15 +53,15 @@
          <EditText
              android:id="@+id/subjectEditTextId"
              android:layout_width="match_parent"
-             android:layout_height="60dp"
-             android:backgroundTint="#00ffffff"
+             android:layout_height="@dimen/edit_text_height_sub"
              android:ems="10"
              android:hint="@string/subject"
              android:inputType="textPersonName"
              tools:ignore="MissingConstraints"
              tools:layout_editor_absoluteX="0dp"
              tools:layout_editor_absoluteY="2dp"
-             android:maxLength="35"/>
+             android:maxLength="35"
+             style="@style/edit_text_style"/>
 
      </LinearLayout>
 
@@ -70,13 +74,13 @@
         <EditText
             android:id="@+id/descriptionEditTextId"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:backgroundTint="#00ffffff"
+            android:layout_height="@dimen/edit_text_height_desc"
             android:ems="10"
             android:gravity="start"
             android:hint="@string/description"
             android:inputType="textMultiLine"
-            android:scrollbars="vertical" />
+            android:scrollbars="vertical"
+            style="@style/edit_text_style"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -86,34 +90,28 @@
             <TextView
                 android:id="@+id/textViewGPS"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center"
-                android:text="Coordinates" />
+                android:text="@string/coordinates"
+                style="@style/text_style"/>
 
             <Button
                 android:id="@+id/buttonGPS"
-                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
-                android:onClick="getCoordinates"
-                android:text="@string/get_coordinates" />
+                android:text="@string/get_coordinates"
+                style="@style/button_style"/>
 
             <Button
-                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
                 android:onClick="captureImage"
-                android:text="@string/capture_image" />
+                android:text="@string/capture_image"
+                style="@style/button_style"/>
 
             <Button
-                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
                 android:onClick="displayImage"
-                android:text="@string/display_image" />
+                android:text="@string/display_image"
+                style="@style/button_style"
+                />
 
         </LinearLayout>
 

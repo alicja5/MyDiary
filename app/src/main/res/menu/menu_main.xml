@@ -1,12 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.memo.diary.Activity.MainActivity">
+    tools:context="pl.edu.pb.mydiary.Activity.MainActivity">
 
     <item
         android:id="@+id/aboutIdMainActivity"
         android:orderInCategory="100"
-        android:title="Instructions"
+        android:title="@string/instructions"
         app:showAsAction="never"
         />
 </menu>

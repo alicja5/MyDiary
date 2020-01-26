@@ -123,14 +123,15 @@ public class MainActivity extends AppCompatActivity {
                     selectList.remove(id);
                     count--;
                 }
-                //else item color will be gray
+                //else item color will be accented
                 else{
                     selectList.add(arrayList.get(i).getId());
-                    listView.getChildAt(i).setBackgroundColor(Color.GRAY);
+                    listView.getChildAt(i).setBackgroundColor(Color.parseColor("#82b1ff"));
                     unDeleteSelect.add(i);//item position storing on new arrayList
                     count++;
                 }
-                actionMode.setTitle(count+" item selected");
+                actionMode.setTitle(count+getString(R.string.items_selected));
+
             }
 
             @Override
@@ -153,7 +154,9 @@ public class MainActivity extends AppCompatActivity {
                     for(String i : selectList){
                         db.delete(i);
                         arrayAdapter.remove(i);
-                        Toast.makeText(getApplicationContext(),count+" item Deleted", Toast.LENGTH_SHORT).show();
+                        Toast toast = Toast.makeText(getApplicationContext(), count+getString(R.string.items_deleted), Toast.LENGTH_LONG);
+                        toast.show();
+
                         Intent intent = new Intent(MainActivity.this,MainActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         finish();
@@ -170,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDestroyActionMode(ActionMode actionMode) {
                 for(int i: unDeleteSelect){
-                    listView.getChildAt(i).setBackgroundColor(Color.WHITE);//reset all selected item with gray color
+                    listView.getChildAt(i).setBackgroundColor(Color.WHITE);//reset all selected items
                 }
                 count = 0;//reset count here
                 unDeleteSelect.clear();

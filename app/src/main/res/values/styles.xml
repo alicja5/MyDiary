@@ -21,4 +21,49 @@
 
     <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!--?xml version="1.0" encoding="UTF-8"?-->
+
+    <style name="Blue" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorBackgroundFloating">@color/primaryLightColor</item>
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:background">@color/primaryColor</item>
+        <item name="android:layout_width">@dimen/button_layout_width</item>
+        <item name="android:color">@color/primaryTextColor</item>
+        <item name="android:layout_marginTop">@dimen/button_layout_marginTop</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="text_style">
+        <item name="android:layout_height">@dimen/text_layout_height</item>
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="edit_text_style">
+        <item name="android:textColorHint">@color/secondaryColor</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="small_button_style">
+        <item name="android:layout_marginRight">@dimen/small_button_marginRight</item>
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="android:background">@color/primaryTextColor</item>
+    </style>
+
+    <style name="instruction_style">
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+
+
+
 </resources>

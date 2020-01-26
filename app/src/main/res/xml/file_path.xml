@@ -3,6 +3,6 @@
     
     <external-path
         name="my-images"
-        path="Android/data/com.example.memo.diary/files/Pictures"/>
-    
+        path="Android/data/com.example.memo.diary/files/Pictures"
+        />
 </paths>

@@ -10,12 +10,12 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/instructionTextView"
+            style="@style/instruction_style"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/about"
-            android:textSize="18dp"
-            android:textColor="#000"/>
+            android:text="@string/about" />
     </ScrollView>
 </LinearLayout>
